@@ -5,11 +5,32 @@
 // In your project's folder from the command line, type the following:
 // compass install singularitygs/box-sizing
 //////////////////////////////
-$legacy-support-for-ie6:     false;
-$legacy-support-for-ie7:     false;
-$legacy-support-for-mozilla: false;
+
 
 //////////////////////////////
 // Import Base
 //////////////////////////////
+@import "singularitygs";
 @import "partials/base";
+
+$grids: 1 4 4 1;
+$grids: add-grid(6 at 30em);
+$grids: add-grid(10 at 50em);
+
+header {
+  background: green;
+}
+
+.pageWrapper {
+  @include background-grid;
+  max-width: 1100px;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+body, html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
