@@ -7,89 +7,111 @@
 //////////////////////////////
 
 //////////////////////////////
-// Import Base
+// Imports
 //////////////////////////////
 
 @import "singularitygs";
 @import "partials/reset";
 @import "partials/rays";
 
-//$output: 'isolation';
+//////////////////////////////
+// Grid Variables
+//////////////////////////////
+
 $grids: 1 10 1;
-$grids: add-grid(1 6 6 1 at 30em);
+$grids: add-grid(1 6 6 1 at 40em);
 $grids: add-grid(1 4 4 4 1 at 60em);
 
 $gutters: 1/3;
+
+//////////////////////////////
+// Demension Variables
+//////////////////////////////
+
 $panel-height: 200px;
 $header-height: 90px;
 $panel-top-margin: 15px;
+$footer-height: 90px;
 
+//////////////////////////////
+// Color and Font Variables
+//////////////////////////////
 
+$headline-font: "gill sans", courier, serif;
+
+//////////////////////////////
+// Styles
+//////////////////////////////
 
 html, body {
-  width: 100%;
-  height: 100%;
   padding: 0;
   margin: 0;
+  @include grid-span(3);
+  @include breakpoint(30em) {
+  }
 }
 
-body {
-  min-height: 100%;
-}
+
 
 header {
   background: #cccccc;
   width: 100%;
   height: $header-height;
-  position: fixed;
   overflow: hidden;
+
   header h1 {
     position: absolute;
     z-index: 12;
   }
 }
 
-
+nav {
+  width: 100%;
+  background: #eee;
+  padding: 10px 0px;
+  font-size: 1em;
+  -moz-box-shadow: 0px 0px 12px grey;
+  -webkit-box-shadow: 0px 0px 12px Grey;
+  box-shadow: 0px 0px 12px grey;
+  > ul {
+    list-style: none;
+    text-align: center;
+    > li {
+      display: inline-table;
+      vertical-align: middle;
+    }
+  }
+}
 
 .main-content {
-  @include background-grid;
   @include grid-span(3);
-  height: inherit;
   margin: 0 auto;
   overflow: auto;
 }
-.main-content > ul {
-  padding: $header-height 0px;
-}
-
 
 .main-content > ul > li {
   @include grid-span(1, 2);
   clear: both;
-  background: red;
   margin-top: $panel-top-margin;
   height: $panel-height;
-  @include breakpoint(30em) {
+  &:last-of-type {
+    margin-bottom: $footer-height + $panel-top-margin;
+  }
+  @include breakpoint(40em) {
     @include grid-span(1, 2);
-    background: blue;
     clear: both;
     display: inline-block;
     &:nth-child(even) {
       @include grid-span(1, 3);
-      background: yellow;
     }
     @include breakpoint(60em) {
       @include grid-span(1, 2);
-      //clear: left;
       &:nth-child(2n+2) {
         @include grid-span(1, 3);
-        //clear: right;
-        background: pink;
       }
       &:nth-child(3n+3) {
         @include grid-span(1, 4);
         clear: left;
-        background: teal;
         position: relative;
         top: -($panel-height + $panel-top-margin);
       }
@@ -97,11 +119,48 @@ header {
   }
 }
 
+.panel {
+  background: #eeeeee;
+  border: 1px solid #666666;
+  height: 100%;
+  -moz-box-shadow: 0px 0px 12px grey;
+  -webkit-box-shadow: 0px 0px 12px Grey;
+  box-shadow: 0px 0px 12px grey;
+  >img, >ul {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  >img {
+    border: 1px solid #666666;
+
+  }
+  > h3 {
+    width: 100%;
+    padding: 10px 0;
+    color: #666666;
+    text-align: center;
+    background: #cccccc;
+    border-bottom: 1px solid #666666;
+  }
+  > h4 {
+    color: #666666;
+    text-align: center;
+  }
+}
+
 footer {
-  background: orange;
+  @include grid-span(3);
+  background: #eeeeee;
   width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  height: $footer-height;
+  text-align: center;
+  display: inline-table;
+  vertical-align: middle;
+  -moz-box-shadow: 0px 0px 12px grey;
+  -webkit-box-shadow: 0px 0px 12px Grey;
+  box-shadow: 0px 0px 12px grey;
 }
 
