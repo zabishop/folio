@@ -28,16 +28,20 @@ $gutters: 1/3;
 // Demension Variables
 //////////////////////////////
 
-$panel-height: 200px;
-$header-height: 90px;
-$panel-top-margin: 15px;
+$panel-height: 400px;
+$header-height: 120px;
+$panel-top-margin: 25px;
 $footer-height: 90px;
 
 //////////////////////////////
 // Color and Font Variables
 //////////////////////////////
 
-$headline-font: "gill sans", courier, serif;
+$global-font: "gill sans", sans-serif;
+$headline-font: $global-font;
+
+$grey-drop-shadow: 0px 0px 12px grey;
+$light-grey-drop-shadow: 0 0 12px #ccc;
 
 //////////////////////////////
 // Styles
@@ -47,21 +51,69 @@ html, body {
   padding: 0;
   margin: 0;
   @include grid-span(3);
-  @include breakpoint(30em) {
-  }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headline-font;
+  //font-weight: 300;
+}
 
+p {
+  font-family: $global-font;
+  font-weight: 100;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-family: $global-font;
+  margin-left: 5px;
+  margin-right: 5px;
+  &:visited {
+    color: #666666;
+  }
+  &:hover {
+    color: orange;
+  }
+  &:active {
+    color: orange;
+  }
+  > img {
+    position: relative;
+    top: 2px;
+  }
+  @include breakpoint(40em) {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+}
 
 header {
   background: #cccccc;
   width: 100%;
   height: $header-height;
   overflow: hidden;
-
-  header h1 {
-    position: absolute;
-    z-index: 12;
+  text-align: center;
+  vertical-align: bottom;
+  padding-top: 40px;
+  >h1 {
+    //padding-top: $header-height - 60px;
+    display: block;
+    font-size: 3em;
+    font-family: $global-font;
+    font-weight: 100;
+    >span {
+      color: orange;
+    }
+  }
+  >h1.left {
+    margin-left: 20px;
+  }
+  >h1.right {
+    font-size: 1.75em;
+    margin-left: 20px;
+    vertical-align: bottom;
   }
 }
 
@@ -70,9 +122,9 @@ nav {
   background: #eee;
   padding: 10px 0px;
   font-size: 1em;
-  -moz-box-shadow: 0px 0px 12px grey;
-  -webkit-box-shadow: 0px 0px 12px Grey;
-  box-shadow: 0px 0px 12px grey;
+  -moz-box-shadow: $grey-drop-shadow;
+  -webkit-box-shadow: $grey-drop-shadow;
+  box-shadow: $grey-drop-shadow;
   > ul {
     list-style: none;
     text-align: center;
@@ -123,15 +175,22 @@ nav {
   background: #eeeeee;
   border: 1px solid #666666;
   height: 100%;
-  -moz-box-shadow: 0px 0px 12px grey;
-  -webkit-box-shadow: 0px 0px 12px Grey;
-  box-shadow: 0px 0px 12px grey;
+  padding-bottom: 5px;
+  -moz-box-shadow: $light-grey-drop-shadow;
+  -webkit-box-shadow: $light-grey-drop-shadow;
+  box-shadow: $light-grey-drop-shadow;
+  &:hover {
+    -moz-box-shadow: 0px 0px 12px orange;
+    -webkit-box-shadow: 0px 0px 12px orange;
+    box-shadow: 0px 0px 12px orange;
+  }
   >img, >ul {
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
     vertical-align: top;
     text-align: center;
     margin-top: 5px;
-    margin-left: 5px;
+
   }
   >img {
     border: 1px solid #666666;
@@ -159,8 +218,8 @@ footer {
   text-align: center;
   display: inline-table;
   vertical-align: middle;
-  -moz-box-shadow: 0px 0px 12px grey;
-  -webkit-box-shadow: 0px 0px 12px Grey;
-  box-shadow: 0px 0px 12px grey;
+  -moz-box-shadow: $grey-drop-shadow;
+  -webkit-box-shadow: $grey-drop-shadow;
+  box-shadow: $grey-drop-shadow;
 }
 
