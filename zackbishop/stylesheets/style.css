@@ -44,25 +44,21 @@ table {
 html, body {
   padding: 0;
   margin: 0;
-  width: 100.0%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
+  height: auto;
 }
 
-/* line 56, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "gill sans", sans-serif;
 }
 
-/* line 61, ../sass/style.scss */
+/* line 63, ../sass/style.scss */
 p {
   font-family: "gill sans", sans-serif;
   font-weight: 100;
 }
 
-/* line 66, ../sass/style.scss */
+/* line 68, ../sass/style.scss */
 a {
   color: black;
   text-decoration: none;
@@ -70,32 +66,32 @@ a {
   margin-left: 5px;
   margin-right: 5px;
 }
-/* line 72, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 a:visited {
   color: #666666;
 }
-/* line 75, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 a:hover {
   color: orange;
 }
-/* line 78, ../sass/style.scss */
+/* line 80, ../sass/style.scss */
 a:active {
   color: orange;
 }
-/* line 81, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 a > img {
   position: relative;
   top: 2px;
 }
 @media (min-width: 40em) {
-  /* line 66, ../sass/style.scss */
+  /* line 68, ../sass/style.scss */
   a {
     margin-left: 15px;
     margin-right: 15px;
   }
 }
 
-/* line 92, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 header {
   background: #cccccc;
   width: 100%;
@@ -105,29 +101,29 @@ header {
   vertical-align: bottom;
   padding-top: 40px;
 }
-/* line 100, ../sass/style.scss */
+/* line 102, ../sass/style.scss */
 header > h1 {
   display: block;
   font-size: 3em;
   font-family: "gill sans", sans-serif;
   font-weight: 100;
 }
-/* line 106, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
 header > h1 > span {
   color: orange;
 }
-/* line 110, ../sass/style.scss */
+/* line 112, ../sass/style.scss */
 header > h1.left {
   margin-left: 20px;
 }
-/* line 113, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 header > h1.right {
   font-size: 1.75em;
   margin-left: 20px;
   vertical-align: bottom;
 }
 
-/* line 120, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
 nav {
   width: 100%;
   background: #eee;
@@ -137,18 +133,18 @@ nav {
   -webkit-box-shadow: 0px 0px 12px grey;
   box-shadow: 0px 0px 12px grey;
 }
-/* line 128, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 nav > ul {
   list-style: none;
   text-align: center;
 }
-/* line 131, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 nav > ul > li {
   display: inline-table;
   vertical-align: middle;
 }
 
-/* line 138, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 .main-content {
   width: 100.0%;
   float: right;
@@ -156,26 +152,26 @@ nav > ul > li {
   margin-right: 0;
   clear: none;
   margin: 0 auto;
-  overflow: auto;
 }
 
-/* line 144, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
 .main-content > ul > li {
   width: 78.94737%;
   float: left;
   margin-right: -100%;
   margin-left: 10.52632%;
   clear: none;
+  position: relative;
   clear: both;
   margin-top: 25px;
   height: 400px;
 }
-/* line 149, ../sass/style.scss */
+/* line 153, ../sass/style.scss */
 .main-content > ul > li:last-of-type {
   margin-bottom: 115px;
 }
 @media (min-width: 40em) {
-  /* line 144, ../sass/style.scss */
+  /* line 147, ../sass/style.scss */
   .main-content > ul > li {
     width: 40%;
     float: left;
@@ -185,7 +181,7 @@ nav > ul > li {
     clear: both;
     display: inline-block;
   }
-  /* line 156, ../sass/style.scss */
+  /* line 160, ../sass/style.scss */
   .main-content > ul > li:nth-child(even) {
     width: 40%;
     float: left;
@@ -195,7 +191,7 @@ nav > ul > li {
   }
 }
 @media (min-width: 40em) and (min-width: 60em) {
-  /* line 144, ../sass/style.scss */
+  /* line 147, ../sass/style.scss */
   .main-content > ul > li {
     width: 26.08696%;
     float: left;
@@ -203,7 +199,7 @@ nav > ul > li {
     margin-left: 8.69565%;
     clear: none;
   }
-  /* line 161, ../sass/style.scss */
+  /* line 165, ../sass/style.scss */
   .main-content > ul > li:nth-child(2n+2) {
     width: 26.08696%;
     float: left;
@@ -211,7 +207,7 @@ nav > ul > li {
     margin-left: 36.95652%;
     clear: none;
   }
-  /* line 164, ../sass/style.scss */
+  /* line 168, ../sass/style.scss */
   .main-content > ul > li:nth-child(3n+3) {
     width: 26.08696%;
     float: left;
@@ -224,7 +220,7 @@ nav > ul > li {
   }
 }
 
-/* line 174, ../sass/style.scss */
+/* line 178, ../sass/style.scss */
 .panel {
   background: #eeeeee;
   border: 1px solid #666666;
@@ -234,13 +230,13 @@ nav > ul > li {
   -webkit-box-shadow: 0 0 12px #cccccc;
   box-shadow: 0 0 12px #cccccc;
 }
-/* line 182, ../sass/style.scss */
+/* line 186, ../sass/style.scss */
 .panel:hover {
   -moz-box-shadow: 0px 0px 12px orange;
   -webkit-box-shadow: 0px 0px 12px orange;
   box-shadow: 0px 0px 12px orange;
 }
-/* line 187, ../sass/style.scss */
+/* line 191, ../sass/style.scss */
 .panel > img, .panel > ul {
   display: block;
   margin: 0 auto;
@@ -248,11 +244,11 @@ nav > ul > li {
   text-align: center;
   margin-top: 5px;
 }
-/* line 195, ../sass/style.scss */
+/* line 199, ../sass/style.scss */
 .panel > img {
   border: 1px solid #666666;
 }
-/* line 199, ../sass/style.scss */
+/* line 203, ../sass/style.scss */
 .panel > h3 {
   width: 100%;
   padding: 10px 0;
@@ -261,19 +257,52 @@ nav > ul > li {
   background: #cccccc;
   border-bottom: 1px solid #666666;
 }
-/* line 207, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
 .panel > h4 {
   color: #666666;
   text-align: center;
 }
 
-/* line 213, ../sass/style.scss */
+/* line 218, ../sass/style.scss */
+#modalOverlay {
+  display: none;
+  position: absolute;
+  background: #eeeeee;
+  z-index: 10;
+  width: 90%;
+  margin: 5%;
+  border: 1px solid #666666;
+}
+/* line 226, ../sass/style.scss */
+#modalOverlay > a {
+  display: block;
+}
+/* line 229, ../sass/style.scss */
+#modalOverlay p {
+  margin: 10px;
+}
+/* line 232, ../sass/style.scss */
+#modalOverlay #closeModalButton {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  border: 1px solid #666666;
+  border-radius: 3px;
+  background: #cccccc;
+  font-family: "gill sans", sans-serif;
+  text-align: center;
+}
+
+/* line 250, ../sass/style.scss */
+.smallText {
+  font-size: .75em;
+}
+
+/* line 254, ../sass/style.scss */
 footer {
-  width: 100.0%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
   background: #eeeeee;
   width: 100%;
   height: 90px;

@@ -50,7 +50,9 @@ $light-grey-drop-shadow: 0 0 12px #ccc;
 html, body {
   padding: 0;
   margin: 0;
-  @include grid-span(3);
+  height: auto;
+  //@include grid-span(3);
+  //height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -138,11 +140,13 @@ nav {
 .main-content {
   @include grid-span(3);
   margin: 0 auto;
-  overflow: auto;
+  //overflow: auto;
+  //height: auto;
 }
 
 .main-content > ul > li {
   @include grid-span(1, 2);
+  position: relative;
   clear: both;
   margin-top: $panel-top-margin;
   height: $panel-height;
@@ -210,8 +214,47 @@ nav {
   }
 }
 
+
+#modalOverlay {
+  display: none;
+  position: absolute;
+  background: #eeeeee;
+  z-index: 10;
+  width: 90%;
+  margin: 5%;
+  border: 1px solid #666666;
+  > a {
+    display: block;
+  }
+  p {
+    margin: 10px;
+  }
+  #closeModalButton {
+    cursor: pointer;
+    //padding: 3px 0;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    background: #cccccc;
+    font-family: $global-font;
+    text-align: center;
+
+  }
+
+}
+
+.smallText {
+  font-size: .75em;
+}
+
 footer {
-  @include grid-span(3);
+  //@include grid-span(3);
+  //position: absolute;
+  //bottom: 0;
   background: #eeeeee;
   width: 100%;
   height: $footer-height;
